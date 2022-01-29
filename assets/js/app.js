@@ -38,4 +38,11 @@ const alphabet = {
 ',':'Decima'
 }
 
-let text = '';
+let text = prompt ('Enter yor combination');
+console.log (`Your combination = ${text}`)
+let arrtext = [...text];
+ arrtext = arrtext.map(function(x){ return x.toUpperCase() });
+let result = '';
+ arrtext.forEach (item=>
+    {result+=alphabet[item];});
+ console.log (`result = ${result}`);
