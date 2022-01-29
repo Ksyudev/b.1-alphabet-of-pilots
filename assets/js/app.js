@@ -36,13 +36,14 @@ const alphabet = {
 '8':'Oktoeight',	
 '9':'Novenine',	
 ',':'Decima'
-}
+};
 
 let text = prompt ('Enter yor combination');
-console.log (`Your combination = ${text}`)
-let arrtext = [...text];
- arrtext = arrtext.map(function(x){ return x.toUpperCase() });
-let result = '';
- arrtext.forEach (item=>
-    {result+=alphabet[item];});
- console.log (`result = ${result}`);
+let uptext = text.toUpperCase();
+let arrtext = [...uptext];
+      console.log (`Your combination = ${uptext}`)
+      let result = arrtext.map(item=>
+          alphabet[item])
+          .filter( (item)=> typeof item !== 'undefined').join(' ');
+       console.log (`result = ${result}`);
+   
